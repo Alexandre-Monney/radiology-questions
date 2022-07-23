@@ -17,6 +17,11 @@ function App() {
 
   const [displayFlag, setDisplayFlag] = useState(false);
   const [headerMessage, setHeaderMessage] = useState(welcomeMessage);
+  const [language, setLanguage] = useState('fr');
+
+  const modifyLanguage = (lang) => {
+    setLanguage(lang);
+  };
 
   const showMeFlag = () => {
     setDisplayFlag(true);
@@ -34,21 +39,27 @@ function App() {
   return (
     <div className='App'>
       <Header headerMessage={headerMessage} />
-      {displayFlag && <Flag />}
+      {displayFlag && <Flag modifyLanguage={modifyLanguage} />}
       <Routes>
         <Route path='/' element={<Navigation resetStates={resetStates} />} />
 
         <Route
           path='/irm'
-          element={<Questions questionList={irm} showMeFlag={showMeFlag} header={modifyHeaderMessage} />}
+          element={
+            <Questions questionList={irm} showMeFlag={showMeFlag} header={modifyHeaderMessage} language={language} />
+          }
         />
         <Route
           path='/scanner'
-          element={<Questions questionList={scan} showMeFlag={showMeFlag} header={modifyHeaderMessage} />}
+          element={
+            <Questions questionList={scan} showMeFlag={showMeFlag} header={modifyHeaderMessage} language={language} />
+          }
         />
         <Route
           path='/radio'
-          element={<Questions questionList={radio} showMeFlag={showMeFlag} header={modifyHeaderMessage} />}
+          element={
+            <Questions questionList={radio} showMeFlag={showMeFlag} header={modifyHeaderMessage} language={language} />
+          }
         />
 
         <Route path='*' element={<NotFound />} />
