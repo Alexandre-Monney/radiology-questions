@@ -9,6 +9,23 @@ import './App.scss';
 import irm from '../../datas/irm';
 import radio from '../../datas/radio';
 import scan from '../../datas/scan';
+const examsList = [
+  {
+    id: 1,
+    path: '/irm',
+    name: irm,
+  },
+  {
+    id: 2,
+    path: '/scanner',
+    name: scan,
+  },
+  {
+    id: 3,
+    path: '/radio',
+    name: radio,
+  },
+];
 import Flag from '../Flag';
 import { useState } from 'react';
 
@@ -44,24 +61,20 @@ function App() {
       <Routes>
         <Route path='/' element={<Navigation resetStates={resetStates} />} />
 
-        <Route
-          path='/irm'
-          element={
-            <Questions questionList={irm} showMeFlag={showMeFlag} header={modifyHeaderMessage} language={language} />
-          }
-        />
-        <Route
-          path='/scanner'
-          element={
-            <Questions questionList={scan} showMeFlag={showMeFlag} header={modifyHeaderMessage} language={language} />
-          }
-        />
-        <Route
-          path='/radio'
-          element={
-            <Questions questionList={radio} showMeFlag={showMeFlag} header={modifyHeaderMessage} language={language} />
-          }
-        />
+        {examsList.map((elem) => (
+          <Route
+            key={elem.id}
+            path={elem.path}
+            element={
+              <Questions
+                questionList={elem.name}
+                showMeFlag={showMeFlag}
+                header={modifyHeaderMessage}
+                language={language}
+              />
+            }
+          />
+        ))}
 
         <Route path='*' element={<NotFound />} />
       </Routes>
