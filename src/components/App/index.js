@@ -30,6 +30,7 @@ function App() {
   const resetStates = () => {
     setDisplayFlag(false);
     setHeaderMessage(welcomeMessage);
+    setLanguage('fr');
   };
 
   const modifyHeaderMessage = (message) => {
