@@ -26,9 +26,6 @@
     "react/no-unescaped-entities": "off"
   },
   "settings": {
-    // "react": {
-    //   "version": "detect"
-    // },
     "import/resolver": {
       "alias": {
         "extensions": [".js", ".jsx"],

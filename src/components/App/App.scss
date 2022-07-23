@@ -1,5 +1,13 @@
 .App {
-  background-color: #b2bec3;
   height: 100vh;
   padding: 1rem;
+
+}
+
+@media (min-width: 768px) {
+  .App {
+    width: 50vw;
+    margin: auto;
+  }
+  
 }
