@@ -1,14 +1,24 @@
+// Import React & Router
 import { Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
+
+// Import App style
+import './App.scss';
+
+// Import all components
 import Header from '../Header';
 import Navigation from '../Navigation';
 import NotFound from '../NotFound';
 import Questions from '../Questions';
-import './App.scss';
 
-//import data pour test
+// Import data
 import irm from '../../datas/irm';
 import radio from '../../datas/radio';
 import scan from '../../datas/scan';
+import Flag from '../Flag';
+import Footer from '../Footer';
+
+// Data for link & routes
 const examsList = [
   {
     id: 1,
@@ -26,8 +36,6 @@ const examsList = [
     name: radio,
   },
 ];
-import Flag from '../Flag';
-import { useState } from 'react';
 
 function App() {
   const welcomeMessage = 'Bienvenue sur Radiology Questions';
@@ -57,7 +65,9 @@ function App() {
   return (
     <div className='App'>
       <Header headerMessage={headerMessage} />
+
       {displayFlag && <Flag modifyLanguage={modifyLanguage} />}
+
       <Routes>
         <Route path='/' element={<Navigation resetStates={resetStates} />} />
 
@@ -78,6 +88,8 @@ function App() {
 
         <Route path='*' element={<NotFound />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 }

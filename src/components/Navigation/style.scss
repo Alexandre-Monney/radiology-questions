@@ -1,21 +1,25 @@
 .nav {
-  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
+  height: 80%;
 }
 
 .nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: #e0e1e2;
-    width: 60%;
-    border-radius: 5px;
     color: #000;
+
+    width: 60%;
+    height: 15vh;
+    margin: 2.5rem 0 !important;
+
+    border-radius: 5px;
     font-weight: bold;
     font-size: 2rem;
-    text-align: center;
-    padding: 3.5rem;
-    align-self: center;
-    margin: 2.5rem 0 !important;
-    height: 15vh;
 }

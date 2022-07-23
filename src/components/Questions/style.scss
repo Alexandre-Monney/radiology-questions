@@ -1,6 +1,9 @@
 .main {
-    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 80%;
-    height: 80%;
-    margin: auto;
+    height: 55vh;
+    margin: 3rem auto;
+    overflow: auto;
 }

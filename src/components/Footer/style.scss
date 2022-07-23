@@ -1,0 +1,18 @@
+.footer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-content {
+        margin: 0;
+        padding-right: 2rem;
+    }
+
+    &-logo {
+        width: 10%;
+        margin-right: 2rem;
+    }
+
+}
+
