@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-const Navigation = ({ hideFlag }) => {
+const Navigation = ({ resetStates }) => {
   useEffect(() => {
-    hideFlag();
+    resetStates();
   }, []);
 
   return (
@@ -25,5 +25,5 @@ const Navigation = ({ hideFlag }) => {
 export default Navigation;
 
 Navigation.propTypes = {
-  hideFlag: PropTypes.func.isRequired,
+  resetStates: PropTypes.func.isRequired,
 };

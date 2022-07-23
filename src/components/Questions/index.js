@@ -3,9 +3,10 @@ import { useEffect } from 'react';
 import { Segment } from 'semantic-ui-react';
 import './style.scss';
 
-const Questions = ({ questionList, showMeFlag }) => {
+const Questions = ({ questionList, showMeFlag, header }) => {
   useEffect(() => {
     showMeFlag();
+    header("Retour à l'Accueil");
   }, []);
 
   return (
@@ -28,4 +29,5 @@ Questions.propTypes = {
     }),
   ),
   showMeFlag: PropTypes.func.isRequired,
+  header: PropTypes.func.isRequired,
 };

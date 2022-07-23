@@ -13,26 +13,43 @@ import Flag from '../Flag';
 import { useState } from 'react';
 
 function App() {
+  const welcomeMessage = 'Bienvenue sur Radiology Questions';
+
   const [displayFlag, setDisplayFlag] = useState(false);
+  const [headerMessage, setHeaderMessage] = useState(welcomeMessage);
 
   const showMeFlag = () => {
     setDisplayFlag(true);
   };
 
-  const hideFlag = () => {
+  const resetStates = () => {
     setDisplayFlag(false);
+    setHeaderMessage(welcomeMessage);
+  };
+
+  const modifyHeaderMessage = (message) => {
+    setHeaderMessage(message);
   };
 
   return (
     <div className='App'>
-      <Header />
+      <Header headerMessage={headerMessage} />
       {displayFlag && <Flag />}
       <Routes>
-        <Route path='/' element={<Navigation hideFlag={hideFlag} />} />
+        <Route path='/' element={<Navigation resetStates={resetStates} />} />
 
-        <Route path='/irm' element={<Questions questionList={irm} showMeFlag={showMeFlag} />} />
-        <Route path='/scanner' element={<Questions questionList={scan} showMeFlag={showMeFlag} />} />
-        <Route path='/radio' element={<Questions questionList={radio} showMeFlag={showMeFlag} />} />
+        <Route
+          path='/irm'
+          element={<Questions questionList={irm} showMeFlag={showMeFlag} header={modifyHeaderMessage} />}
+        />
+        <Route
+          path='/scanner'
+          element={<Questions questionList={scan} showMeFlag={showMeFlag} header={modifyHeaderMessage} />}
+        />
+        <Route
+          path='/radio'
+          element={<Questions questionList={radio} showMeFlag={showMeFlag} header={modifyHeaderMessage} />}
+        />
 
         <Route path='*' element={<NotFound />} />
       </Routes>
