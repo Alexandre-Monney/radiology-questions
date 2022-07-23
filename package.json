@@ -15,8 +15,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "semantic-ui-css-patch && react-scripts start",
+    "build": "semantic-ui-css-patch && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -41,6 +41,7 @@
   "description": "This is a project with basics radiology questions",
   "main": "index.js",
   "devDependencies": {
+    "@semantic-ui-react/css-patch": "^1.0.0",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-alias": "^1.1.2",
