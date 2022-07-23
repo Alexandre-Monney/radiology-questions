@@ -1,7 +1,13 @@
 import './style.scss';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
-const Navigation = () => {
+const Navigation = ({ hideFlag }) => {
+  useEffect(() => {
+    hideFlag();
+  }, []);
+
   return (
     <div className='nav'>
       <Link className='nav-button' to='/irm'>
@@ -17,3 +23,7 @@ const Navigation = () => {
   );
 };
 export default Navigation;
+
+Navigation.propTypes = {
+  hideFlag: PropTypes.func.isRequired,
+};

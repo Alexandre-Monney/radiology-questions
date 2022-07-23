@@ -19,12 +19,16 @@ function App() {
     setDisplayFlag(true);
   };
 
+  const hideFlag = () => {
+    setDisplayFlag(false);
+  };
+
   return (
     <div className='App'>
       <Header />
       {displayFlag && <Flag />}
       <Routes>
-        <Route path='/' element={<Navigation />} />
+        <Route path='/' element={<Navigation hideFlag={hideFlag} />} />
 
         <Route path='/irm' element={<Questions questionList={irm} showMeFlag={showMeFlag} />} />
         <Route path='/scanner' element={<Questions questionList={scan} showMeFlag={showMeFlag} />} />
