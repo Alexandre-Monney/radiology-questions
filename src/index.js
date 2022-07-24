@@ -9,7 +9,7 @@ import './reset.css';
 import 'semantic-ui-css/semantic.min.css';
 
 // Import main component
-import App from './components/App';
+import App from './components/App/App';
 
 const rootReactElement = (
   <BrowserRouter>
