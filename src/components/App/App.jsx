@@ -66,11 +66,13 @@ function App() {
   const Pages = [
     {
       id: 1,
+      name: 'HomePage',
       path: '/',
       element: <HomePage resetStates={resetStates} />,
     },
     {
       id: 2,
+      name: 'IRM',
       path: '/irm',
       element: (
         <QuestionList
@@ -83,6 +85,7 @@ function App() {
     },
     {
       id: 3,
+      name: 'Scanner',
       path: '/scanner',
       element: (
         <QuestionList
@@ -95,6 +98,7 @@ function App() {
     },
     {
       id: 4,
+      name: 'Radio',
       path: '/radio',
       element: (
         <QuestionList

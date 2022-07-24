@@ -9,11 +9,10 @@ const QuestionList = ({ questions, handleLanguageChange, header, languages }) =>
     header("Retour à l'Accueil");
   }, []);
 
-  console.log(questions);
-
   return (
     <>
       <LanguageSelector languages={languages} onLanguageChange={handleLanguageChange} />
+
       <div className='main'>
         {questions.map((q) => (
           <Segment key={q.id} className='question'>
