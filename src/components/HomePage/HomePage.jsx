@@ -4,41 +4,45 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const links = [
-  // Pages.jsx will be in remplacement after export
   {
     id: 1,
-    path: '/irm',
     name: 'IRM',
+    short: 'irm',
   },
   {
     id: 2,
-    path: '/scanner',
     name: 'Scanner',
+    short: 'scanner',
   },
   {
     id: 3,
-    path: '/radio',
     name: 'Radio',
+    short: 'radio',
   },
 ];
 
-const Navigation = ({ resetStates }) => {
+const HomePage = ({ resetStates, setCategory }) => {
   useEffect(() => {
     resetStates();
   }, []);
 
+  const handleClick = (category) => {
+    setCategory(category);
+  };
+
   return (
     <div className='nav'>
       {links.map((link) => (
-        <Link key={link.id} className='nav-button' to={link.path}>
+        <Link key={link.id} className='nav-button' to='/category' onClick={() => handleClick(link.short)}>
           {link.name}
         </Link>
       ))}
     </div>
   );
 };
-export default Navigation;
+export default HomePage;
 
-Navigation.propTypes = {
+HomePage.propTypes = {
   resetStates: PropTypes.func.isRequired,
+  setCategory: PropTypes.func.isRequired,
 };
