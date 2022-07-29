@@ -1,7 +1,7 @@
-import './style.scss';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import Header from '../Header/Header';
+import './style.scss';
 
 const links = [
   {
@@ -21,28 +21,26 @@ const links = [
   },
 ];
 
-const HomePage = ({ resetStates, setCategory }) => {
-  useEffect(() => {
-    resetStates();
-  }, []);
-
+const HomePage = ({ setCategory }) => {
   const handleClick = (category) => {
     setCategory(category);
   };
 
   return (
-    <div className='nav'>
-      {links.map((link) => (
-        <Link key={link.id} className='nav-button' to='/category' onClick={() => handleClick(link.short)}>
-          {link.name}
-        </Link>
-      ))}
-    </div>
+    <>
+      <Header headerMessage={'Bienvenue sur Radiology Questions'} />
+      <div className='nav'>
+        {links.map((link) => (
+          <Link key={link.id} className='nav-button' to='/category' onClick={() => handleClick(link.short)}>
+            {link.name}
+          </Link>
+        ))}
+      </div>
+    </>
   );
 };
 export default HomePage;
 
 HomePage.propTypes = {
-  resetStates: PropTypes.func.isRequired,
   setCategory: PropTypes.func.isRequired,
 };

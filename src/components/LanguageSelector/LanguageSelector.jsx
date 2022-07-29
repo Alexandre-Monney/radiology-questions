@@ -1,8 +1,9 @@
+import languages from '../../datas/languages';
 import PropTypes from 'prop-types';
 import { Image } from 'semantic-ui-react';
 import './style.scss';
 
-const LanguageSelector = ({ languages, onLanguageChange }) => {
+const LanguageSelector = ({ onLanguageChange }) => {
   const selectedLanguage = (value) => {
     onLanguageChange(value);
   };
@@ -24,12 +25,5 @@ const LanguageSelector = ({ languages, onLanguageChange }) => {
 export default LanguageSelector;
 
 LanguageSelector.propTypes = {
-  languages: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      short: PropTypes.string.isRequired,
-      img: PropTypes.string.isRequired,
-    }),
-  ),
   onLanguageChange: PropTypes.func.isRequired,
 };
