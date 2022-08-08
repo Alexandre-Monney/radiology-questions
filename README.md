@@ -25,14 +25,11 @@ $ npm install
 $ npm start
 ```
 
-## Screenshots
+## Preview
 <p align="center">
-<img src="./public/screenshots/HomePage.png" width="800" height="500"> 
+<img src="./public/screenshots/website.gif"> 
 </p>
   
-<p align="center">
-<img  src="./public/screenshots/QuestionPage.png" width="800" height="500">
-</p>
 
 ## Other information
 
