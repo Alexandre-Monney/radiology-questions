@@ -19,10 +19,10 @@ Project is created with:
 To run this project, install it locally using npm:
 
 ```
-clone this repository
-$ cd ../radiology-questions
-$ npm install
-$ npm start
+git clone git@github.com:Alexandre-Monney/radiology-questions.git
+cd radiology-questions
+npm install
+npm start
 ```
 
 ## Preview
