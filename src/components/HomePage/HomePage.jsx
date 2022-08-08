@@ -5,33 +5,30 @@ import './style.scss';
 
 const links = [
   {
-    id: 1,
     name: 'IRM',
     short: 'irm',
   },
   {
-    id: 2,
     name: 'Scanner',
     short: 'scanner',
   },
   {
-    id: 3,
     name: 'Radio',
     short: 'radio',
   },
 ];
 
-const HomePage = ({ setCategory }) => {
+const HomePage = ({ onCategoryChange }) => {
   const handleClick = (category) => {
-    setCategory(category);
+    onCategoryChange(category);
   };
 
   return (
     <>
-      <Header headerMessage={'Bienvenue sur Radiology Questions'} />
+      <Header message='Bienvenue sur Radiology Questions' />
       <div className='nav'>
         {links.map((link) => (
-          <Link key={link.id} className='nav-button' to='/category' onClick={() => handleClick(link.short)}>
+          <Link key={link.short} className='nav-button' to='/category' onClick={() => handleClick(link.short)}>
             {link.name}
           </Link>
         ))}
@@ -42,5 +39,5 @@ const HomePage = ({ setCategory }) => {
 export default HomePage;
 
 HomePage.propTypes = {
-  setCategory: PropTypes.func.isRequired,
+  onCategoryChange: PropTypes.func.isRequired,
 };

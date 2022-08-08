@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 // Import Styles
-import './index.css';
 import './reset.css';
 import 'semantic-ui-css/semantic.min.css';
+import './index.css';
 
 // Import main component
 import App from './components/App/App';

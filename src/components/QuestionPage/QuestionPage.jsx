@@ -22,7 +22,7 @@ const QuestionPage = ({ category }) => {
 
   return (
     <>
-      <Header headerMessage="Retour à l'Accueil" />
+      <Header message="Retour à l'Accueil" />
       <LanguageSelector onLanguageChange={handleLanguageChange} />
       <QuestionList questions={questionsByLang} />
     </>

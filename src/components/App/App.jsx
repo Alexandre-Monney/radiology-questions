@@ -17,7 +17,7 @@ function App() {
   return (
     <div className='App'>
       <Routes>
-        <Route path='/' element={<HomePage setCategory={setCategory} />} />
+        <Route path='/' element={<HomePage onCategoryChange={setCategory} />} />
 
         <Route path='/category' element={<QuestionPage category={category} />} />
 

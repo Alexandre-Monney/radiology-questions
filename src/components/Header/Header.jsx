@@ -2,12 +2,12 @@ import { Segment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-const Header = ({ headerMessage }) => {
+const Header = ({ message }) => {
   return (
     <header>
       <a href='/'>
         <Segment className='header-title' textAlign='center'>
-          {headerMessage}
+          {message}
         </Segment>
       </a>
     </header>
@@ -16,5 +16,5 @@ const Header = ({ headerMessage }) => {
 export default Header;
 
 Header.propTypes = {
-  headerMessage: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
 };

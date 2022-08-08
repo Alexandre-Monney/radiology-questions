@@ -3,7 +3,14 @@
     flex-direction: column;
     justify-content: space-between;
     width: 80%;
-    height: 55vh;
-    margin: 3rem auto;
+    height: 48vh;
+    margin: 3rem auto 2rem auto;
     overflow: auto;
 }
+
+@media (min-width: 768px) {
+    .main {
+      margin: 3rem auto 3rem auto;
+    }
+    
+  }
