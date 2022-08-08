@@ -27,7 +27,7 @@ $ npm start
 
 ## Screenshots
 
-<img src="./public/screenshots/HomePage.png" width="500" height="400"> <img src="./public/screenshots/QuestionPage.png" width="500" height="400">
+<img align=center src="./public/screenshots/HomePage.png" width="500" height="400"> <img align=center src="./public/screenshots/QuestionPage.png" width="500" height="400">
 
 ## Other information
 
