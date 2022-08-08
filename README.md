@@ -26,8 +26,13 @@ $ npm start
 ```
 
 ## Screenshots
-
-<img src="./public/screenshots/HomePage.png" width="400" height="300"> <img  src="./public/screenshots/QuestionPage.png" width="400" height="300">
+<p align="center">
+<img src="./public/screenshots/HomePage.png" width="800" height="500"> 
+</p>
+  
+<p align="center">
+<img  src="./public/screenshots/QuestionPage.png" width="800" height="500">
+</p>
 
 ## Other information
 
