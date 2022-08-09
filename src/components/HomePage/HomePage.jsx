@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import './style.scss';
@@ -18,17 +17,13 @@ const links = [
   },
 ];
 
-const HomePage = ({ onCategoryChange }) => {
-  const handleClick = (category) => {
-    onCategoryChange(category);
-  };
-
+const HomePage = () => {
   return (
     <>
       <Header message='Bienvenue sur Radiology Questions' />
       <div className='nav'>
         {links.map((link) => (
-          <Link key={link.short} className='nav-button' to='/category' onClick={() => handleClick(link.short)}>
+          <Link key={link.short} className='nav-button' to={`/${link.short}`}>
             {link.name}
           </Link>
         ))}
@@ -37,7 +32,3 @@ const HomePage = ({ onCategoryChange }) => {
   );
 };
 export default HomePage;
-
-HomePage.propTypes = {
-  onCategoryChange: PropTypes.func.isRequired,
-};
