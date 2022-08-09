@@ -12,6 +12,6 @@ export default [
   {
     name: 'Espanol',
     short: 'es',
-    img: '../../../images/spanish_flag.svg',
+    img: '../../../images/spanish_flag.png',
   },
 ];
